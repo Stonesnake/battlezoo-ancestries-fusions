@@ -1,0 +1,263 @@
+{
+    "id": "battlezoo-ancestries-fusions",
+    "title": "Battlezoo Ancestries: Fusions by Roll for Combat",
+    "description": "",
+    "url": "http://www.battlezoo.com",
+    "version": "1.0",
+    "protected": false,
+    "manifest": "https://rollforcombat.com/wp-content/uploads/vttmanifest/battlezoo-ancestries-fusions/module.json",
+    "authors": [
+        {
+            "name": " Mark Seifter",
+            "flags": {}
+        }
+    ],
+    "compatibility": {
+        "minimum": "11",
+        "verified": "11.315"
+    },
+    "relationships": {
+        "dependencies": [
+            {
+                "id": "dnd5e",
+                "type": "system"
+            },
+            {
+                "id": "pf2e",
+                "type": "system"
+            }
+        ],
+        "systems": [
+            {
+                "id": "dnd5e",
+                "type": "system",
+                "compatibility": {
+                    "minimum": "3",
+                    "verified": "3"
+                }
+            },
+            {
+                "id": "pf2e",
+                "type": "system",
+                "compatibility": {
+                    "minimum": "5.14.4"
+                }
+            }
+        ]
+    },
+    "packs": [
+        {
+            "label": "Ancestry",
+            "name": "ancestries-pf2e",
+            "path": "packs/ancestries-pf2e",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Effects",
+            "name": "effects-pf2e",
+            "path": "packs/effects-pf2e",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Feats",
+            "name": "feats-pf2e",
+            "path": "packs/feats-pf2e",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Features",
+            "name": "features-pf2e",
+            "path": "packs/features-pf2e",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Heritages",
+            "name": "heritages-pf2e",
+            "path": "packs/heritages-pf2e",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Journals",
+            "name": "journals-pf2e",
+            "path": "packs/journals-pf2e",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "pf2e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "JournalEntry",
+            "flags": {}
+        },
+        {
+            "label": "Equipment",
+            "name": "equipment-dnd5e",
+            "path": "packs/backgrounds",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Races",
+            "name": "race-dnd5e",
+            "path": "packs/races",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Racial Features",
+            "name": "race-feature-dnd5e",
+            "path": "packs/race-features",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Feats",
+            "name": "feat-dnd5e",
+            "path": "packs/feats",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "LIMITED",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Item",
+            "flags": {}
+        },
+        {
+            "label": "Journals",
+            "name": "journals-dnd5e",
+            "path": "packs/journals-dnd5e",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "system": "dnd5e",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "JournalEntry",
+            "flags": {}
+        },
+        {
+            "label": "Token Preview",
+            "name": "scenes",
+            "path": "packs/scenes",
+            "banner": "modules/battlezoo-ancestries-fusions/assets/banner.webp",
+            "ownership": {
+                "PLAYER": "OBSERVER",
+                "ASSISTANT": "OWNER"
+            },
+            "type": "Scene",
+            "flags": {}
+        }
+    ],
+    "media": [
+        {
+            "type": "setup",
+            "caption": "Battlezoo Ancestries: Fusions",
+            "thumbnail": "modules/battlezoo-ancestries-fusions/assets/preview.webp",
+            "loop": false,
+            "flags": {}
+        }
+    ],
+    "packFolders": [
+        {
+            "name": "Roll For Combat",
+            "sorting": "m",
+            "folders": [
+                {
+                    "name": "Fusions",
+                    "sorting": "m",
+                    "packs": [
+                        "ancestries-pf2e",
+                        "heritages-pf2e",
+                        "feats-pf2e",
+                        "effects-pf2e",
+                        "features-pf2e",
+                        "scenes",
+                        "journals-pf2e",
+                        "journals-dnd5e",
+                        "equipment-dnd5e",
+                        "race-dnd5e",
+                        "race-feature-dnd5e",
+                        "feat-dnd5e"
+                    ]
+                }
+            ]
+        }
+    ],
+    "flags": {
+        "battlezoo-ancestries-fusions": {
+            "pf2e-homebrew": {
+                "featTraits": {
+                    "combined": {
+                        "label": "Combined",
+                        "description": "Each round during an encounter, the first time a character who is part of a particular fusion takes their turn, all characters in the fusion can agree to take one or more combined actions together. Combined activities cost the listed number of actions for every character in the fusion: the first character to act spends their actions, and all the other characters in the fusion contribute the same number of future actions on their next turns. In order to take a combined activity, all characters in the fusion must be able to act and must be expecting to gain enough actions on their next turn to contribute to the combined activity, and they each must meet any requirements for the combined activity. Once the actions are committed, the fusion decides which character will perform the combined activity on their turn."
+                    },
+                    "fusion": "Fusion"
+                },
+                "creatureTraits": {
+                    "fusion": "Fusion"
+                }
+            }
+        }
+    },
+    "esmodules": [
+        "scripts/register-journal-style.mjs",
+        "scripts/oneTimePopup.mjs"
+    ],
+    "styles": [
+        "styles/fusions.css"
+    ]
+}

@@ -1,0 +1,1642 @@
+/* core style overrides */
+.sheet.journal-entry .journal-entry-page :is(h1, h2, h3, h4, h5, h6):not(:first-child) {
+  margin-top: unset;
+}
+.journal-page-content :is(h1,h2,h3,h4,h5,h6):not(:first-child) {
+  margin-top: unset;
+}
+/* Fonts */
+@font-face {
+  font-family: "Taroca";
+  src: url("./fonts/Taroca.ttf") format('truetype');
+}
+@font-face {
+  font-family: "Good OT";
+  src: url("./fonts/GoodOT.otf") format('opentype');
+}
+@font-face {
+  font-family: "Good OT Bold";
+  src: url("./fonts/GoodOT-Bold.otf") format('opentype');
+}
+@font-face {
+  font-family: "Good OT Cond Bold";
+  src: url("./fonts/GoodOT-CondBold.otf") format('opentype');
+}
+@font-face {
+  font-family: "Good OT Italic";
+  src: url("./fonts/GoodOT-Italic.otf") format('opentype');
+}
+@font-face {
+  font-family: "Sabon LT";
+  src: url("./fonts/Sabon-LT-Std-Roman.otf") format('opentype');
+}
+@font-face {
+  font-family: "Sabon LT Italic";
+  src: url("./fonts/Sabon-LT-Std-Italic.ttf") format('truetype');
+}
+@font-face {
+  font-family: "Albertus";
+  src: url("./fonts/ALBR55X.TTF") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Albertus";
+  src: url("./fonts/ALBR85X.TTF") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Copperplate";
+  src: url("./fonts/Copperplate.ttc") format("truetype");
+}
+@font-face {
+  font-family: "Galliard";
+  src: url("./fonts/GalliardStd-Roman.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Galliard";
+  src: url("./fonts/GalliardStd-Ultra.otf") format("opentype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Captain Regular";
+  src: url("./fonts/Captain-Regular-Font.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Captain Roughcut";
+  src: url("./fonts/Captain-Roughcut.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Captain Shipwreck";
+  src: url("./fonts/Captain-Shipwreck-2021.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "DwarvenAxe";
+  src: url("./fonts/DwarvenAxe-BB-W00-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo_Condensed-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo_Condensed-Italic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo_Condensed-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("./fonts/Archivo_Condensed-BoldItalic.ttf") format("truetype");
+  font-style: italic;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Skulls and Crossbones";
+  src: url("./fonts/Skullsandcrossbones-RppKM.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Mistral";
+  src: url("./fonts/MISTRAL.TTF") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Segoepr";
+  src: url("./fonts/segoepr.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Blackwood Castle";
+  src: url("./fonts/Blackwood Castle.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+/* Variable Definitions */
+.pf2e-fusions {
+  --yol-indigo: #330099;
+  --yol-indigo-dark: #25271c;
+  --yol-indigo-light: #f1f2df;
+  --paizo-blue-light: #7c7bab;
+  --paizo-blue-dark: #171f69;
+  --pf2e-red: #5e0000;
+  --pf2e-gold: #c5832b;
+  --yol-red: #610900;
+
+  --yol-green: #4f6f64;
+  --yol-green-dark: #25271c;
+  --yol-green-light: #d3cea5;
+  --yol-blue: #b3bdc6;
+  --yol-blue-dark: #313656;
+  --yol-gold: #e9b770;
+  --yol-gold-dark: #956321;
+  --yol-grey: #858e80;
+  --yol-grey-dark: #474d44;
+  --yol-tan: #996747;
+  --yol-brown: #431c00;
+  --yol-white: #ffffff;
+  --yol-table-header: #412e83;
+  --yol-table: #b0e2f9;
+  --yol-table-light: #e4f4fd;
+
+  --gradient-start: #2B0B17;
+  --gradient-end: #69164A;
+  /* Font Variables */
+  /* Headers */
+  --journal-font: 'DwarvenAxe', 'Taroca', serif;
+  --journal-font-size: 4.0rem;
+  --h1-font: 'DwarvenAxe', 'Taroca', serif;
+  --h1-font-size: 2.9rem;
+  --h2-font: 'DwarvenAxe', 'Taroca', serif;
+  /* --h2-sidebar: 'Good OT Cond Bold', serif; */
+  /* --h2-sidebar-font-size: 1.2rem; */
+  --h2-font-size: 2.5rem;
+  --h3-font: 'DwarvenAxe', serif;
+  --h3-font-size: 1.8rem;
+  --h4-font: 'DwarvenAxe', serif;
+  --h4-font-size: 2.3rem;
+  /* Body */
+  --body-font-size: 1rem;
+  --main-font: 'Sabon LT', serif;
+  --main-italics-font: 'Sabon LT Italic', serif;
+  --main-bold-font: 'Sabon Lt ', serif;
+  --main-font-size: 1rem;
+  /* Narrative Text */
+  --narrative-font: 'Good OT', serif;
+  --narrative-font-size: 1rem;
+  /* Title Heading */
+  --heading-title-font: 'Trajan', serif;
+  --heading-title-font-size: 3rem;
+  --heading-title-border-bottom: 5px solid transparent;
+  /* Captions */
+  --captions-font: 'Skulls and Crossbones', serif;
+  --captions-font-size: 1.4rem;
+
+  /* Regular Headings */
+  --heading-font: 'Cambria' , serif;
+  --heading-main-font-size: 1.625rem;
+  --heading-secondary-font-size: 1.5rem;
+  --heading-tertiary-font-size: 1.375;
+  --heading-incline-font-size: 1rem;
+  --heading-font-color: #481A19;
+  --heading-border: 2px solid transparent;
+  /* Box Font Settings */
+  --box-font: 'Ancizar', serif;
+  --box-font-size: 1rem;
+  /* ToC Font Settings */
+  --toc-box-heading-font-size: 1.1875rem;
+  --toc-table-font-size: 1rem;
+  /* Journal Background Image */
+  /* Box Text */
+}
+
+/* Headers */
+.pf2e-fusions .journal-page-content p {
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+  line-height: 1.45rem;
+  margin: 0 0 0.5rem 0;
+}
+.pf2e-fusions .journal-page-content h1 {
+  font-family: var(--h1-font);
+  font-size: var(--h1-font-size);
+  color: var(--yol-red);
+  letter-spacing: 0rem;
+}
+.pf2e-fusions h1 {
+  font-family: var(--h1-font);
+  font-size: var(--h1-font-size);
+  color: var(--yol-red);
+  letter-spacing: 0rem;
+}
+
+.pf2e-fusions h3 {
+  font-family: var(--h3-font);
+  font-size: var(--h3-font-size);
+  color: var(--yol-red);
+  letter-spacing: 0rem;
+}
+
+.pf2e-fusions .journal-page-content h1 .title {
+  font-family: var(--heading-title-font);
+  font-size: var(--heading-title-font-size);
+  border-bottom: var(--heading-title-border-bottom);
+  border-image: var(--heading-title-border-image);
+  text-align: center;
+}
+/* level 2 header */
+.pf2e-fusions .journal-page-content h2,
+.pf2e-fusions .journal-page-header h2, 
+.sheet.journal-entry.dnd5e2-journal .journal-entry-content h2 {
+  font-family: var(--h2-font);
+  font-size: var(--h2-font-size);
+  /* font-weight: bold; */
+  /* text-transform: uppercase; */
+  color: var(--yol-red);
+  border-bottom: 0px solid var(--color-underline-header);
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.pf2e-fusions hr {
+  border-top: 2px solid black;
+  border-bottom: 0px;
+}
+
+.pf2e-fusions .journal-page-content .black {
+  color: #000000;
+}
+
+.pf2e-fusions .journal-page-content .table-title {
+  color: #000000;
+  margin: 0 0 0 0.8em;
+}
+
+.pf2e-fusions .journal-page-content h3,
+.sheet.journal-entry.dnd5e2-journal .journal-entry-content h3 {
+  font-family: var(--h3-font);
+  font-size: var(--h3-font-size);
+  font-weight: normal;
+}
+.pf2e-fusions .journal-page-content h4,
+.sheet.journal-entry.dnd5e2-journal .journal-entry-content h4 {
+  font-family: var(--h4-font);
+  color: var(--yol-red);
+  font-size: var(--h4-font-size);
+  margin: 0 0 0 0;
+  font-weight: normal;
+  text-align: center;
+  letter-spacing: -0.05rem;
+}
+.pf2e-fusions .journal-page-content h1,
+.pf2e-fusions .journal-page-content h2,
+.pf2e-fusions .journal-page-content h3 {
+  text-align: left;
+  border: none;
+  color: var(--yol-red);
+  display: block;
+  margin: -1.0rem 0 0 0;
+  font-weight: normal;
+}
+.pf2e-fusions .journal-page-content .ii-white {
+  color: var(--yol-white);
+}
+.pf2e-fusions .journal-page-content h2.ii-white {
+  color: var(--yol-white);
+}
+.pf2e-fusions .journal-page-content a.entity-link,
+.pf2e-fusions .journal-page-content a.entity-link.broken,
+.pf2e-fusions .journal-page-content a.content-link,
+.pf2e-fusions .journal-page-content a.inline-roll {
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 2px 5px 2px 4px;
+  border-radius: 0.3em;
+  background: var(--yol-indigo);
+  color: var(--yol-indigo-light);
+  margin-right: 1px;
+  border-color: var(--yol-indigo);
+  /* line-height: 0.8rem; */
+}
+.pf2e-fusions .journal-page-content a.entity-link i,
+.pf2e-fusions .journal-page-content a.entity-link.broken i,
+.pf2e-fusions .journal-page-content a.content-link i,
+.pf2e-fusions .journal-page-content a.inline-roll i {
+  color: var(--yol-indigo-light);
+}
+.pf2e-fusions .journal-page-content [data-pf2-check]::before,
+.pf2e-fusions .journal-page-content [data-pf2-repost]::before {
+  padding: unset;
+  color: var(--yol-indigo-light);
+  margin-left: 2px;
+}
+.pf2e-fusions .journal-page-content [data-pf2-repost],
+.pf2e-fusions .journal-page-content [data-pf2-check],
+.pf2e-fusions .journal-page-content [data-pf2-check]:not([data-pf2-show-dc=gm]) {
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 1px 2px 1px 2px;
+  background: var(--yol-indigo);
+  color: var(--yol-indigo-light);
+  margin-right: 1px;
+  border-color: var(--yol-indigo);
+  border-radius: 0.3em;
+  /* line-height: 0.8rem; */
+}
+.pf2e-fusions .journal-page-content span [data-visibility]:is(div,em,h4,p,section,span,strong):not([data-visibility=all]) {
+  background: rgba(0, 0, 0, 0.25);
+}
+.pf2e-fusions .journal-page-content span.trait {
+  display: inline-block;
+  border-left: 5px solid var(--yol-gold);
+  border-right: 5px solid var(--yol-gold);
+  border-top: 2px solid var(--yol-gold);
+  border-bottom: 2px solid var(--yol-gold);
+  background: var(--pf2e-red);
+  color: white;
+  padding: 2px 0 0 0;
+  text-transform: uppercase;
+  font-family: 'Good OT Cond Bold', Serif;
+  max-height: 24px;
+  min-width: 90px;
+  text-align: center;
+}
+.pf2e-fusions .journal-page-content span.trait.blue {
+  background: #566193;
+}
+.pf2e-fusions .journal-page-content span.trait.green {
+  background: #3a7a58;
+}
+.journal-sheet.pf2e-fusions .journal-page-content {
+}
+.journal-sheet.pf2e-fusions .journal-page-content .shadow {
+  filter: drop-shadow(-5px -5px 5px rgba(0, 0, 0, 0.4));
+}
+.journal-sheet.pf2e-fusions .journal-page-content code {
+  justify-content: center;
+  border: 2px solid var(--yol-green);
+  border-radius: 10px;
+  background: rgba(75, 125, 0, 0.15);
+  padding: 5px;
+}
+.pf2e-fusions .split {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure {
+  /* margin: 20px 20px 25px 20px; */
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure img {
+  border: none;
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.head {
+  margin: 10px 20px 25px 20px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.box {
+  border: 2px solid var(--yol-green);
+  background: var(--yol-green-light);
+  border-radius: 10px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.right {
+  float: right;
+  margin: 0.25rem 0 0.25rem 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.right figcaption,
+.journal-sheet.pf2e-fusions .journal-page-content figure.left figcaption {
+  font-family: var(--captions-font);
+  font-size: var(--captions-font-size);
+  color: var(--yol-red);
+  margin-top: 0.1rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.left figure figcaption {
+  color: var(--yol-red);
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.npc figure figcaption {
+  color: var(--yol-red);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .character-gallery figure figcaption {
+  /* font-family: var(--main-font); */
+  /* font-size: var(--body-font-size); */
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.flipx {
+  transform: scaleX(-1);
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.left {
+  float: left;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content figure.left figure.square {
+  flex-basis: 150px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content img.light-writer {
+  border-radius: 25px;
+  filter: opacity(0.8) sepia(0.9);
+  transition: 0.5s;
+}
+.journal-sheet.pf2e-fusions .journal-page-content img.light-writer:hover {
+  border-radius: 25px;
+  filter: opacity(0.8) sepia(0);
+}
+.journal-sheet.pf2e-fusions .journal-page-content ul {
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+  margin: 5px 0 5px 0;
+  /* padding: 0 0 0 10px; */
+  /* list-style: none; */
+}
+.journal-sheet.pf2e-fusions .journal-page-content .subhead {
+  color: var(--yol-red);
+  font-weight: bold;
+  font-style: italic;
+  margin: 0 0 0.5rem 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .subhead-isle {
+  color: var(--yol-red);
+  font-weight: bold;
+  font-style: italic;
+  margin: 0 0 0 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content ul.traits {
+  list-style-type: none;
+  display: flex;
+  /* gap: 5px; */
+  line-height: initial;
+  padding: 0 0 0 0px;
+  margin-bottom: 2px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content ul.traits li {
+  border-left: 4px solid var(--yol-gold);
+  border-right: 4px solid var(--yol-gold);
+  border-top: 2px solid var(--yol-gold);
+  border-bottom: 2px solid var(--yol-gold);
+  background: var(--pf2e-red);
+  color: white;
+  padding: 2px 8px 2px 8px;
+  text-transform: uppercase;
+  font-family: 'Good OT Cond Bold', Serif;
+  max-height: 24px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content ul.traits li.blue {
+  background: #566193;
+}
+.journal-sheet.pf2e-fusions .journal-page-content ul.traits li.green {
+  background: #3a7a58;
+}
+.journal-sheet.pf2e-fusions .journal-page-content ul.traits li.uncommon {
+  background: #98513d;
+}
+.journal-sheet.pf2e-fusions .journal-page-content ul.traits li.rare {
+  background: #002664;
+}
+.journal-sheet.pf2e-fusions .journal-page-content li {
+  margin: 0 0 7px 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content dl {
+  margin: 0px 10px;
+  padding: 5px;
+  background: var(--yol-blue);
+  border-top: 2px solid var(--yol-blue-dark);
+  border-bottom: 2px solid var(--yol-blue-dark);
+}
+.journal-sheet.pf2e-fusions .journal-page-content dl dt {
+  color: var(--yol-blue-dark);
+  font-family: var(--h2-font);
+  font-size: var(--h3-font-size);
+}
+.journal-sheet.pf2e-fusions .journal-page-content dl dd {
+  color: black;
+  line-height: 1.25rem;
+  font-family: var(--main-font);
+  font-size: 0.9rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content dl dd a.entity-link,
+.journal-sheet.pf2e-fusions .journal-page-content dl dd a.entity-link.broken,
+.journal-sheet.pf2e-fusions .journal-page-content dl dd a.content-link,
+.journal-sheet.pf2e-fusions .journal-page-content dl dd a.inline-roll {
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 2px;
+  background: var(--yol-blue-dark);
+  color: var(--yol-green-light);
+  margin-right: 1px;
+  border-color: var(--yol-blue);
+  /* line-height: 0.8rem; */
+}
+.journal-sheet.pf2e-fusions .journal-page-content table {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  border: unset;
+  font-size: 1.05rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content table td,
+.journal-sheet.pf2e-fusions .journal-page-content table th,
+.sheet.journal-entry.dnd5e2-journal .journal-page-content table td {
+  font-family: 'Archivo', Serif;
+  min-width: 2rem;
+  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  line-height: 1.45rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content table th {
+  text-align: left;
+  font-family: 'Archivo', Serif;
+  background: var(--yol-table-header);
+  color: var(--yol-white);
+}
+.journal-sheet.pf2e-fusions .journal-page-content table tr {
+  background: var(--yol-table);
+  font-family: 'Archivo', Serif;
+}
+.journal-sheet.pf2e-fusions .journal-page-content table tr:nth-child(odd),
+.sheet.journal-entry.dnd5e2-journal .journal-page-content table tr:nth-child(odd) {
+  background: var(--yol-table);
+}
+.journal-sheet.pf2e-fusions .journal-page-content table tr:nth-child(even),
+.sheet.journal-entry.dnd5e2-journal .journal-page-content table tr:nth-child(even) {
+  background: var(--yol-table-light);
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.advancement {
+  display: flex;
+  flex-direction: column;
+  border-top: 2px solid var(--yol-green);
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.advancement h2 {
+  font-family: var(--h1-font);
+  font-size: 4.5rem;
+  color: var(--yol-green-light);
+  -webkit-text-stroke: 2px var(--yol-green);
+  padding: 20px;
+  flex-basis: 100px;
+  text-align: center;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.advancement article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 2px solid var(--yol-green);
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.advancement article div {
+  flex-basis: 75%;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.location-head {
+  margin: 0 10px 15px 10px;
+  border-bottom: 2px solid var(--yol-green);
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.location-head header {
+  display: flex;
+  justify-content: space-between;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.location-head article {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.location-head article p {
+  margin: initial;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.npc {
+  display: flex;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.npc p.stats {
+  color: var(--yol-green);
+  font-weight: bold;
+  font-style: italic;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.npc article {
+  flex-basis: 80%;
+}
+.journal-sheet.pf2e-fusions .journal-page-content section.npc figure {
+  margin: auto;
+  display: block;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text {
+  display: flex;
+  border: 2px solid black;
+  margin: 1rem;
+  gap: 10px;
+  
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.instruction {
+  display: block;
+  width: 375px;
+  height: max-content;
+  background: url(./assets/sidebar-back.webp);
+  background-size: calc(100% - 50px) calc(100% - 60px);
+  background-repeat: no-repeat no-repeat;
+  background-position: center;
+  border-radius: 125px;
+  padding: 0.5rem;
+  font: var(--h2-font);
+  color: var(--yol-white);
+  filter: drop-shadow(2px 2px 4px black);
+  border: unset;
+  scrollbar-color: var(--pf2e-gold);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.instruction p {
+  font-family: var(--narrative-font);
+  text-align: justify;
+  line-height: 1.1rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-border {
+  min-height: 300px;
+  background: url(./assets/sidebar-top.webp), url(./assets/sidebar-bottom.webp);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right top, bottom left;
+  background-size: 97% 210px, 97% 210px;
+  padding: 2.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-border > .box-content {
+  min-height: 220px;
+  margin: 0.5rem 0.15rem 1rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-border > .box-content h2 {
+  font-family: var(--h2-sidebar);
+  font-size: var(--h2-sidebar-font-size);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-border > .box-content > h1,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-border > .box-content h2,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-border > .box-content h3,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-border > .box-content h4 {
+  color: var(--yol-white);
+  margin-top: 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.narrative {
+  display: block;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 5px 13px -7px var(--color-shadow-dark);
+  font-size: 1.1rem;
+  font-family: var(--narrative-font);
+  border-top: 2px ridge var(--yol-green);
+  border-bottom: 2px ridge var(--yol-green);
+  border-left: none;
+  border-right: none;
+  color: var(--yol-green);
+  padding: 0.5rem;
+  clear: right;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.narrative.half {
+  width: 50%;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.narrative.first {
+  margin-top: 0px;
+}
+
+/* Settlement */
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement {
+  display: block;
+  border: 2px solid black;
+  border-radius: 8px 8px 8px 8px;
+  background: url(./assets/settlement-background.png);
+  flex-basis: 49%;
+
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement header {
+  position: relative;
+  min-height: 80px;
+  padding-left: 1.5rem;
+  color: white;
+  background: url(./assets/pirate-paper.png);
+  background-size: cover;
+  border-bottom: 2px solid black;
+  border-radius: 6px 6px 0 0px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement header img {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  border: none;
+  filter: drop-shadow(2px 2px 4px black);
+  object-fit: cover;
+  /* border-radius: 50px; */
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement header h1,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement header h2,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement header h4,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement header p.pf2e-fusions-threat {
+  font-family: var(--h3-font);
+  font-size: var(--h3-font-size);
+  color: white;
+  margin: 0;
+  padding: 0.2rem 0;
+  /* text-transform: uppercase; */
+  line-height: initial;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement header section {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement article {
+  padding: 1rem 1rem 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement article h3,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement article h4 {
+  color: var(--pf2e-red);
+  border-top: 2px solid var(--pf2e-red);
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement article h3:first-child,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement article h4:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement a.entity-link,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement a.inline-roll,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement a.content-link {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement a.entity-link i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement a.inline-roll i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement a.content-link i {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-repost],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-check],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 3px 2px 2px 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-repost] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-check] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-check]:not([data-pf2-show-dc=gm]) i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.settlement [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) i {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+
+/* New Action */
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.action {
+  display: block;
+  border: 2px solid black;
+  border-radius: 8px 8px 8px 8px;
+  background: #f5efe0;
+  margin: 1rem 1rem;
+  padding: .5rem .5rem;
+}
+
+/* Encounters */
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter {
+  display: block;
+  border: 2px solid black;
+  border-radius: 40px 8px 8px 8px;
+  background: rgba(0, 0, 0, 0.15);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter header {
+  position: relative;
+  min-height: 80px;
+  padding-left: 100px;
+  color: white;
+  background: url(./assets/encounter-back.webp);
+  background-size: cover;
+  border-bottom: 2px solid black;
+  border-radius: 40px 6px 0 40px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter header img {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  border: none;
+  filter: drop-shadow(2px 2px 4px black);
+  object-fit: cover;
+  /* border-radius: 50px; */
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter header h1,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter header h2,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter header h4,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter header p.pf2e-fusions-threat {
+  font-family: var(--h2-font);
+  font-size: var(--h2-font-size);
+  color: white;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  line-height: initial;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter header section {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter article {
+  padding: 1rem 1rem 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter article h3,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter article h4 {
+  color: var(--pf2e-red);
+  border-top: 2px solid var(--pf2e-red);
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter article h3:first-child,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter article h4:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter a.entity-link,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter a.inline-roll,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter a.content-link {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px 5px 2px 4px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter a.entity-link i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter a.inline-roll i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter a.content-link i {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-repost],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-check],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 3px 2px 2px 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-repost] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-check] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-check]:not([data-pf2-show-dc=gm]) i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.encounter [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) i {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt {
+  display: block;
+  border: 2px solid black;
+  border-radius: 40px 8px 8px 8px;
+  box-shadow: 0 10px 13px -7px var(--color-shadow-dark);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt header {
+  position: relative;
+  min-height: 80px;
+  padding-left: 100px;
+  color: white;
+  background: url("../../../ui/denim075.png") repeat;
+  border-bottom: 2px solid black;
+  border-radius: 40px 6px 0 40px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt header img {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  border: none;
+  filter: drop-shadow(2px 2px 4px black);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt header h1,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt header h2 {
+  margin: 0;
+  padding: 0.5rem 0;
+  color: #ff6400;
+}
+
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt article {
+  padding: 1rem 1rem 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt article h3 {
+  color: var(--color-text-hyperlink);
+  border-top: 2px solid var(--color-text-hyperlink);
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt article h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt a.entity-link,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt a.content-link,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt a.inline-roll {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: black;
+  color: white;
+  text-decoration: none;
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt a.entity-link i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt a.content-link i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt a.inline-roll i {
+  color: white;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt [data-pf2-repost],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt [data-pf2-check],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt [data-pf2-check]:not([data-pf2-show-dc=gm]) {
+  background: rgba(0, 0, 0, 0.5);
+  border-color: black;
+  padding: 3px 2px 2px 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt [data-pf2-repost] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt [data-pf2-check] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.fvtt [data-pf2-check]:not([data-pf2-show-dc=gm]) i {
+  /* color: white; */
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation {
+  display: block;
+  border: 2px solid black;
+  border-radius: 40px 8px 8px 8px;
+  background: rgba(137, 149, 120, 0.25);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation header {
+  position: relative;
+  min-height: 80px;
+  padding-left: 100px;
+  color: white;
+  background: url(./assets/dark-parchment-back.webp);
+  background-size: cover;
+  border-bottom: 2px solid black;
+  border-radius: 40px 6px 0 40px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation header img {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  border: none;
+  filter: drop-shadow(2px 2px 4px black);
+  object-fit: cover;
+  /* border-radius: 50px; */
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation header h1,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation header h2 {
+  color: white;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation article {
+  padding: 1rem 1rem 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation article h3 {
+  color: var(--yol-green);
+  border-top: 2px solid var(--yol-green);
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation article h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation a.entity-link,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation a.inline-roll,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation a.content-link {
+  background: var(--yol-green);
+  border-color: var(--yol-green-light);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation a.entity-link i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation a.inline-roll i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation a.content-link i {
+  color: var(--yol-green-light);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation [data-pf2-repost],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation [data-pf2-check],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation [data-pf2-check]:not([data-pf2-show-dc=gm]) {
+  background: var(--yol-green);
+  border-color: var(--yol-green-light);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation [data-pf2-repost] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation [data-pf2-check] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.investigation [data-pf2-check]:not([data-pf2-show-dc=gm]) i {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure {
+  display: block;
+  border: 2px solid black;
+  border-radius: 40px 8px 8px 8px;
+  background: rgba(149, 120, 120, 0.25);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure header {
+  position: relative;
+  min-height: 80px;
+  padding-left: 100px;
+  color: white;
+  background: url(./assets/red-back-light.webp);
+  background-size: cover;
+  border-bottom: 2px solid black;
+  border-radius: 40px 6px 0 40px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure header img {
+  height: 96px;
+  width: 96px;
+  position: absolute;
+  left: -8px;
+  top: -10px;
+  border: none;
+  filter: drop-shadow(2px 2px 4px black);
+  object-fit: cover;
+  /* border-radius: 50px; */
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure header h1,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure header h2 {
+  color: white;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure article {
+  padding: 1rem 1rem 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure article h3 {
+  color: var(--pf2e-red);
+  border-top: 2px solid var(--pf2e-red);
+  margin: 0.5rem 0 0;
+  padding-top: 0.5rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure article h3:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure a.entity-link,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure a.inline-roll,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure a.content-link {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure a.entity-link i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure a.inline-roll i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure a.content-link i {
+  color: var(--yol-green-light);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure [data-pf2-repost],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure [data-pf2-check],
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure [data-pf2-check]:not([data-pf2-show-dc=gm]) {
+  /* background: var(--paizo-blue-dark);
+  border-color: var(--pf2e-gold); */
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure [data-pf2-repost] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure [data-pf2-check] i,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.treasure [data-pf2-check]:not([data-pf2-show-dc=gm]) i {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.right {
+  float: right;
+  margin: initial;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.left {
+  float: left;
+  margin: initial;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-content {
+  min-height: 400px;
+  max-height: 600px;
+  margin: 2rem 0.75rem 3rem;
+  padding-right: 1rem;
+  overflow: hidden scroll;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-content h2 {
+  font-family: var(--h2-sidebar);
+  font-size: var(--h2-sidebar-font-size);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-content > h1,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-content h2,
+.journal-sheet.pf2e-fusions .journal-page-content .box-text > .box-content h3 {
+  color: var(--yol-white);
+  margin-top: 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text ::-webkit-scrollbar-thumb {
+  background: var(--yol-gold-dark);
+  border: 1px solid var(--yol-gold);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .box-text.narrative {
+  font-size: 1.1rem;
+  font-family: var(--narrative-font);
+  border-top: 2px ridge var(--yol-indigo);
+  border-bottom: 2px ridge var(--yol-indigo);
+  border-left: none;
+  border-right: none;
+  color: var(--yol-indigo);
+  padding: 5px 10px 5px 5px;
+  margin-right: 3%;
+  margin-left: 3%;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_Stat-Body,
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_Credits {
+  font-family: 'Archivo', Serif;
+  text-align: center;
+  font-size: 1.05rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_Feat-Body {
+  font-family: 'Archivo', Serif;
+  font-size: 1.05rem;
+  margin: 1.5rem 0 0.2rem 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_Feat-Body-main {
+  font-family: 'Archivo', Serif;
+  font-size: 1.05rem;
+  margin: 0 0 0 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_Special-Indent-2 {
+  font-family: 'Archivo', Serif;
+  padding-left: 5% ;
+  text-indent: -2% ;
+  font-size: 1.05rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .Creature-Top {
+  font-family: 'Archivo', Serif;
+  font-size: 1.2rem;
+  margin: 1rem 0rem -0.3rem 0rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_Creature-Text,
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_General-divider {
+  font-family: 'Archivo', Serif;
+  padding-left: 2.5% ;
+  text-indent: -2.5% ;
+  margin: 0 0 0rem 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .Body-Copy_Body-Indent-Bullets {
+  padding-left: 5% ;
+  text-indent: -1.3% ;
+}
+.journal-sheet.pf2e-fusions .journal-page-content blockquote {
+  border: unset;
+}
+.journal-sheet.pf2e-fusions .journal-page-content blockquote p {
+  font-family: 'Sabon LT', serif;
+}
+.journal-sheet.pf2e-fusions .journal-page-content blockquote.ii-quote {
+  color: var(--yol-green);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margins: 1rem;
+}
+
+.journal-sheet.pf2e-fusions .journal-page-content .compartment li {
+  margin: 0 0 7px 0;
+  font-family: 'Archivo', Serif;
+  font-size: 1.2rem;
+  color: var(--yol-red);
+  font-weight: normal;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment p {
+  font-family: 'Archivo', Serif;
+  font-size: 1.2rem;
+  color: var(--yol-red);
+  text-align: justify;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .dragons p {
+  font-family: 'Segoepr', Serif;
+  font-size: 1.05rem;
+  color: var(--yol-red);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .dragons p.signature {
+  font-family: 'Mistral', Serif;
+  text-align: right;
+  font-size: 1.6rem;
+  color: var(--yol-red);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article {
+  background: url(./assets/parchment-back.png);
+  flex-basis: 49%;
+  padding: 5px 15px 5px 15px;
+  border: 3px solid var(--yol-gold-dark);
+  border-radius: 20px;
+  margin-bottom: 5px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article ul,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article ul {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article.full,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article.full {
+  flex-basis: 100%;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article.full ul,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article.full ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article .sidebar-title,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article .sidebar-title {
+  font-family: 'DwarvenAxe', Serif;
+  text-align: center;
+  font-size: 2.0rem;
+  color: var(--yol-red);
+  letter-spacing: -0.05rem;
+  margin-top: 5px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h1,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h2,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h3,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h4,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h5,
+ {
+  font-family: 'DwarvenAxe', Serif;
+  text-align: center;
+  font-size: 2.3rem;
+  color: var(--yol-red);
+  letter-spacing: -0.05rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article h1,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article h2,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article h3,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article h4,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article h5 {
+  font-family: 'Blackwood Castle', Serif;
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--yol-red);
+  letter-spacing: -0.05rem;
+  font-weight: normal;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article a.entity-link,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article a.inline-roll,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article a.content-link,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article a.content-link,
+.pf2e-fusions .journal-page-content .compartment article a.entity-link,
+.pf2e-fusions .journal-page-content .compartment article a.entity-link.broken,
+.pf2e-fusions .journal-page-content .compartment article a.content-link,
+.pf2e-fusions .journal-page-content .compartment article a.inline-roll
+{
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article a.entity-link i,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article a.inline-roll i,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article a.content-link i {
+  color: var(--yol-green-light);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-repost],
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-check],
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-check]:not([data-pf2-show-dc=gm]),
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 3px 2px 2px 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-repost] i,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-check] i,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-check]:not([data-pf2-show-dc=gm]) i,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article [data-pf2-effect-area]:not([data-pf2-show-dc=gm]) i {
+  background: var(--pf2e-red);
+  border-color: var(--pf2e-gold);
+  color: var(--yol-green-light);
+  padding: 2px;
+  /* line-height: 0.8rem; */
+  font-weight: bold;
+}
+/* .journal-sheet.pf2e-fusions .journal-page-content .compartment article h3 {
+  border-bottom: 3px dotted var(--yol-blue-dark);
+  margin-bottom: 1rem;
+} */
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h3.half,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h5.half {
+  width: 50%;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h3.third,
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article h5.third {
+  width: 33%;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article section,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article section {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+  font-family: var(--main-font);
+  font-size: var(--body-font-size);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment article section img,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons article section img {
+  border: none;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .compartment .box-text.narrative,
+.journal-sheet.pf2e-fusions .journal-page-content .dragons .box-text.narrative {
+  color: var(--yol-blue-dark);
+}
+.journal-sheet.pf2e-fusions .journal-page-content .character-gallery {
+  justify-content: space-around;
+  margin: 1rem 0;
+  background: var(--yol-green-light);
+  border: 2px solid var(--yol-green);
+  border-radius: 10px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .character-gallery figure {
+  flex: 0 0 160px;
+  margin: 0.25rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content .character-gallery figure img {
+  border: none;
+}
+
+.journal-sheet.pf2e-fusions .journal-page-content aside.right {
+  float: right;
+  margin: initial;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-sidebar {
+  border-left: 3px solid;
+  flex-basis: 37%;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-sidebar ul {
+  font-size: 0.8rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-float-block {
+  float: right;
+  margin: 0 5px 10px 10px;
+  width: 280px;
+  padding: 10px 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+  border: initial;
+  border-left: 2px solid black;
+  color: black;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-float-block.left {
+  float: left;
+  border-left: initial;
+  border-right: 2px solid black;
+  margin: 0 10px 10px 5px;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-float-block h2 {
+  font-family: var(--h1-font);
+  color: var(--yol-green);
+  font-weight: normal;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-float-block h2:first-child {
+  margin-top: 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-float-block h3 {
+  text-align: left;
+  border: none;
+  color: var(--yol-green);
+  display: block;
+  margin: 0.15rem 0 0 0.15rem;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-float-block h4 {
+  font-size: 1.25rem;
+  color: var(--yol-green);
+  margin-bottom: 0;
+}
+.journal-sheet.pf2e-fusions .journal-page-content aside.ii-float-block ul {
+  list-style: none;
+  line-height: 1.5rem;
+  padding-left: 10px;
+}
+
+.pf2e-fusions section.journal-entry-content > .journal-entry-pages {
+  margin: 0 0 0 0.5rem;
+  padding-right: 1rem;
+}
+
+.pf2e-fusions .journal-entry-page {
+  padding: 0 10px;
+}
+
+.pf2e-fusions form {
+  padding: 0px 5px;
+}
+.pf2e-fusions form .editor {
+  height: calc(100% - 145px);
+}
+.pf2e-fusions form.journal-header {
+  background-position: top center;
+  text-align: center;
+  height: 80px;
+  width: 100%;
+  margin: auto;
+  z-index: 2;
+}
+.pf2e-fusions .journal-entry-content.flexcol {
+  min-width: 400px;
+}
+.pf2e-fusions .journal-header {
+  margin: 0.25rem;
+}
+.pf2e-fusions .journal-header input.title, .sheet.journal-entry.dnd5e2-journal .journal-header .title:disabled {
+  background: transparent;
+  background-image: url(assets/header-input.webp);
+  background-size: cover;
+  background-position: bottom;
+  margin: 0 0 rem;
+  padding: 0.1rem 0rem 0.9rem 0rem;
+  height: auto;
+  width: auto;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  border: none;
+  font-family: var(--journal-font);
+  font-size: 3.2rem;
+  color: var(--yol-red);
+  text-overflow: ellipsis;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: -0.05rem;
+}
+.pf2e-fusions .journal-header h1, {
+  line-height: 100px;
+}
+.pf2e-fusions select[name="folder"] {
+  display: none;
+}
+.pf2e-fusions {
+  /* Background overrides*/
+}
+.pf2e-fusions.journal-sheet:not(.minimized) {
+  min-width: 400px;
+}
+
+.compendium.directory .directory-list .directory-item {
+  line-height: 38px;
+}
+
+div.journal-sheet.pf2e-fusions.window-app:not(.minimized) header.window-header {
+  background-image: url(assets/window-header.webp);
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-position: bottom left;
+  padding-bottom: 2px;
+  line-height: 2rem;
+  z-index: 3;
+  border: unset;
+  filter: drop-shadow(1px 1px 4px #150c0c);
+}
+
+div.journal-sheet.pf2e-fusions.window-app:not(.minimized) header.window-header h4, div.journal-sheet.pf2e-km.window-app:not(.minimized) header.window-header a {
+  text-shadow: 1px 2px 3px black;
+}
+
+div.journal-sheet.pf2e-fusions.window-app .window-header a {
+  text-shadow: 1px 2px 3px black;
+}
+
+.pf2e-fusions .directory .directory-header {
+  text-shadow: 1px 2px 3px black;
+}
+
+.pf2e-fusions section.window-content {
+  color: black;
+  background: url("./assets/white-paper-background.webp") repeat;
+}
+.pf2e-fusions section.window-content  section.journal-entry-content {
+  color: black;
+  background: url("./assets/white-paper-background.webp") repeat;
+  min-width: 600px;
+  min-height: 175px;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.journal-sidebar:not(.collapsed) {
+  background-image: url(assets/toc-header.webp), url(assets/toc-bot.webp);
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  background-position: top, bottom;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar:not(.collapsed) .active span.page-number {
+  background-image: url(assets/toc-pointer.webp);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level1 span.page-title {
+  font-family: "Good OT Cond Bold", sans-serif;
+  font-size: 1.1rem;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level2 span.page-title {
+  font-family: "Good OT", sans-serif;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level3 span.page-title {
+  font-family: "Good OT", sans-serif;
+
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level4 span.page-title {
+  font-family: "Good OT", sans-serif;
+ 
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item.level5 span.page-title {
+  font-family: "Good OT", sans-serif;
+  text-indent: 0.5rem;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item span.page-title {
+  text-overflow: ellipsis;
+  font-size: 0.9rem;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar:not(.collapsed) span.page-number {
+  color: transparent;
+  width: 24px;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list li.directory-item {
+  /* scroll-margin-top: 2rem;
+  line-height: 30px;
+  border: unset; */
+}
+
+.sheet.journal-entry.pf2e-fusions .pages-list .directory-item {
+  line-height: 32px;
+  border-top: 0px solid var(--color-border-dark); 
+  border-bottom: 0px solid var(--color-border-dark-3); 
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+div.journal-sheet.pf2e-fusions.window-app.journal-entry aside.sidebar.flexcol.directory.journal-sidebar ol.directory-list {
+  padding: 2rem 0 1rem 0;
+}
+
+.sheet.journal-entry.pf2e-fusions .pages-list .h2 .heading-link {
+  text-indent: var(--level-indent);
+  font-family: "Good OT", sans-serif;
+}
+
+.sheet.journal-entry.pf2e-fusions .pages-list .h3 .heading-link {
+  text-indent: var(--level-indent);
+  font-family: "Good OT", sans-serif;
+}
+
+.sheet.journal-entry.pf2e-fusions .pages-list .headings li:last-child {
+  margin-bottom: 0rem;
+}
