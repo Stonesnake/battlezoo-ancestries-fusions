@@ -136,7 +136,7 @@
 }
 /* Variable Definitions */
 .pf2e-fusions {
-  --yol-indigo: #330099;
+  --yol-indigo: #5e0000;
   --yol-indigo-dark: #25271c;
   --yol-indigo-light: #f1f2df;
   --paizo-blue-light: #7c7bab;
@@ -157,9 +157,9 @@
   --yol-tan: #996747;
   --yol-brown: #431c00;
   --yol-white: #ffffff;
-  --yol-table-header: #412e83;
-  --yol-table: #b0e2f9;
-  --yol-table-light: #e4f4fd;
+  --yol-table-header: #610900;
+  --yol-table: #ded5c4;
+  --yol-table-light: #f7f3e7;
 
   --gradient-start: #2B0B17;
   --gradient-end: #69164A;
@@ -219,11 +219,13 @@
   line-height: 1.45rem;
   margin: 0 0 0.5rem 0;
 }
-.pf2e-fusions .journal-page-content h1 {
+.pf2e-fusions .journal-page-content h1,
+.sheet.journal-entry.dnd5e2-journal .journal-entry-content h1 {
   font-family: var(--h1-font);
   font-size: var(--h1-font-size);
   color: var(--yol-red);
   letter-spacing: 0rem;
+  font-weight: normal;
 }
 .pf2e-fusions h1 {
   font-family: var(--h1-font);
@@ -297,7 +299,7 @@
   border: none;
   color: var(--yol-red);
   display: block;
-  margin: -1.0rem 0 0 0;
+  margin: 0 0 0 0;
   font-weight: normal;
 }
 .pf2e-fusions .journal-page-content .ii-white {
@@ -309,7 +311,9 @@
 .pf2e-fusions .journal-page-content a.entity-link,
 .pf2e-fusions .journal-page-content a.entity-link.broken,
 .pf2e-fusions .journal-page-content a.content-link,
-.pf2e-fusions .journal-page-content a.inline-roll {
+.pf2e-fusions .journal-page-content a.inline-roll,
+.sheet.journal-entry.dnd5e2-journal .journal-page-content a:is(.content-link, .inline-roll),
+.sheet.journal-entry.dnd5e2-journal .journal-page-content .roll-link a, .sheet.journal-entry.dnd5e2-journal .journal-page-content a:is(.content-link, .inline-roll) > i, .sheet.journal-entry.dnd5e2-journal .journal-page-content .roll-link a > i {
   font-weight: bold;
   font-size: 0.9rem;
   padding: 2px 5px 2px 4px;
@@ -318,6 +322,7 @@
   color: var(--yol-indigo-light);
   margin-right: 1px;
   border-color: var(--yol-indigo);
+  text-decoration: none;
   /* line-height: 0.8rem; */
 }
 .pf2e-fusions .journal-page-content a.entity-link i,
@@ -1486,7 +1491,7 @@
 .pf2e-fusions .journal-header {
   margin: 0.25rem;
 }
-.pf2e-fusions .journal-header input.title, .sheet.journal-entry.dnd5e2-journal .journal-header .title:disabled {
+.pf2e-fusions .journal-header input.title, .sheet.journal-entry.dnd5e2-journal .journal-header .title:disabled, .sheet.journal-entry.dnd5e2-journal .journal-header .title {
   background: transparent;
   background-image: url(assets/header-input.webp);
   background-size: cover;
