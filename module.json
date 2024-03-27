@@ -5,7 +5,8 @@
     "url": "http://www.battlezoo.com",
     "version": "1.0",
     "protected": false,
-    "manifest": "https://rollforcombat.com/wp-content/uploads/vttmanifest/battlezoo-ancestries-fusions/module.json",
+    "manifest": "https://raw.githubusercontent.com/Stonesnake/battlezoo-ancestries-fusions/main/module.json",
+    "download": "https://github.com/Stonesnake/battlezoo-ancestries-fusions/archive/refs/heads/main.zip",
     "authors": [
         {
             "name": " Mark Seifter",
