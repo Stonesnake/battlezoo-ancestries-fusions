@@ -3,7 +3,7 @@
     "title": "Battlezoo Ancestries: Fusions by Roll for Combat",
     "description": "The whole is greater than the sum of their parts! With Battlezoo Ancestries Fusions, you can play as an ancestry that contains multiple characters in one, either sharing with another player or taking control of them all yourself in a game with fewer players. Play as one of three fusion heritages and learn unique combined abilities where you work together for a greater effect! Heritages include the two-headed giant, which proves that two heads really are better than one; the Cerberus, a vigilant three-headed guardian hounds; and the Hydra, four-headed serpents whose heads can regrow from their stumps. Play with your friends today!",
     "url": "http://www.battlezoo.com",
-    "version": "1.0",
+    "version": "1.1",
     "protected": false,
     "manifest": "https://raw.githubusercontent.com/Stonesnake/battlezoo-ancestries-fusions/main/module.json",
     "download": "https://github.com/Stonesnake/battlezoo-ancestries-fusions/archive/refs/heads/main.zip",
@@ -15,7 +15,7 @@
     ],
     "compatibility": {
         "minimum": "11",
-        "verified": "11.315"
+        "verified": "13"
     },
     "relationships": {
         "dependencies": [
