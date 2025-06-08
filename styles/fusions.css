@@ -1553,8 +1553,8 @@ div.journal-sheet.pf2e-fusions.window-app .window-header a {
 }
 
 .pf2e-fusions section.window-content {
-  color: black;
-  background: url("./assets/white-paper-background.webp") repeat;
+  background: transparent;
+  backdrop-filter: blur(4px);
 }
 .pf2e-fusions section.window-content  section.journal-entry-content {
   color: black;
